@@ -1,7 +1,5 @@
-import React from 'react';
 const About: React.FC = () => {
 
-    const aboutHeader = `เกี่ยวกับหมูย่างแกล้มเบียร์`
     const aboutText = [`ที่นี่เราไม่แค่ขายหมูกระทะอร่อยๆ`,
         `แต่ยังมีเบียร์เย็นๆ รอคุณอยู่!`,
         `แล้วคุณจะได้ลิ้มลองหมูกระทะที่เราคัดสรร`,
@@ -12,18 +10,27 @@ const About: React.FC = () => {
 
     return (
         <>
-            <section id='about' className='py-10 px-4 text-center desktop:text-left'>
-                <header>
-                    <h1 className="font-chonburi text-2xl mb-4">{aboutHeader}</h1>
-                </header>
+            <section id='about' className='
+                flex flex-col text-center
+                mobile:flex-row mobile:text-left
+                justify-center 
+                py-10 px-4'>
+                <video width="343" height="223" controls>
+                    <source src="/assets/videos/video.mp4" type="video/mp4" />
+                </video>
                 <div>
-                    {
-                        aboutText.map((paragraph, index) => (
-                            <p key={index} className="font-[300] text-base leading-6">
-                                {paragraph}
-                            </p>
-                        ))
-                    }
+                    <header>
+                        <h1 className="font-chonburi text-2xl mb-4">เกี่ยวกับหมูย่างแกล้มเบียร์</h1>
+                    </header>
+                    <div>
+                        {
+                            aboutText.map((paragraph, index) => (
+                                <p key={index} className="font-[300] text-base leading-6">
+                                    {paragraph}
+                                </p>
+                            ))
+                        }
+                    </div>
                 </div>
             </section>
         </>

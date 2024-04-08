@@ -5,8 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap');
 
-body{
+body {
     background-color: #222;
     font-family: 'Prompt', sans-serif;
     color: #FFF;
+}
+
+li::marker {
+    color: #FFF;
+}
+
+#contact-header{
+    display: inline-flex;
+}
+
+#contact-header::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-image: url('/assets/icon.png');
+    background-size: 40px 40px; 
+    margin-right: 1rem;
 }

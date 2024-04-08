@@ -15,7 +15,7 @@ const Menu: React.FC = () => {
                     </p>
                 </div>
             <div className="flex flex-col mobile:flex-row justify-between">
-                <div className="font-[300]">
+                <div className="font-[300] mobile:w-[374px]">
                     <h1 className="font-chonburi text-2xl mb-4 mt-8 mobile:mt-0">ชุดเปิดเตา 259 บาท</h1>
                     <span>รวมหมูคัดสรรด้วยกัน 6 ส่วน (+บวกฟรีชุดผัก)</span>
                     <ul className="list-disc pl-4">
@@ -25,8 +25,8 @@ const Menu: React.FC = () => {
                     </ul>
                 </div>
 
-                <div className="font-[300]">
-                    <h1 className="font-chonburi text-2xl mb-4 mt-8">ของทานเล่น</h1>
+                <div className="font-[300] mobile:w-[374px]">
+                    <h1 className="font-chonburi text-2xl mb-4 mt-8 mobile:mt-0">ของทานเล่น</h1>
                     <ul className="list-disc pl-4">
                         <li>แหนมย่าง</li>
                         <li>ถั่วแระญี่ปุ่น</li>
@@ -36,11 +36,11 @@ const Menu: React.FC = () => {
                     </ul>
                 </div>
 
-                <div className="font-[300]">
-                    <h1 className="font-chonburi text-2xl mb-4 mt-8">เคร่ืองดื่มเย็นๆ</h1>
-                    <ul className="flex justify-between">
+                <div className="font-[300] mobile:w-[374px]">
+                    <h1 className="font-chonburi text-2xl mb-4 mt-8 mobile:mt-0">เคร่ืองดื่มเย็นๆ</h1>
+                    <ul className="flex">
                         <div>
-                            <ul className="list-disc pl-4">
+                            <ul className="list-disc pl-4 w-[167.5px] mobile:w-[182px]">
                                 <li>หงษ์ทอง(แบน)</li>
                                 <li>รีเจนซี่ (แบน)</li>
                                 <li>ลีโอ</li>
@@ -49,7 +49,7 @@ const Menu: React.FC = () => {
                             </ul>
                         </div>
                         <div>
-                            <ul className="list-disc pl-4 mobile:ml-6 mobile:mr-[36px]">
+                            <ul className="list-disc pl-4  w-[167.5px] mobile:w-[182px]">
                                 <li>โชจู</li>
                                 <li>น้ำเปล่า</li>
                                 <li>โซดา</li>

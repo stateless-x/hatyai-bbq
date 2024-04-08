@@ -10,7 +10,9 @@ const NavDesktop: React.FC = () => {
     return (
         <nav className={` ${styles.navbar} flex items-center justify-between flex-wrap bg-navbar-gray py-4 px-6 fixed top-0 left-0 right-0 z-50 h-[80px]`}>
             <div className="flex items-center">
-                <Image src="/assets/icon.png" alt="Logo" width={52} height={52} />
+                <a href="#hero">
+                    <Image src="/assets/icon.png" alt="Logo" width={52} height={52} />
+                </a>
             </div>
             <div className={`flex justify-between  text-base`}>
                 <a href="#about">
@@ -36,14 +38,24 @@ const NavDesktop: React.FC = () => {
 
 const NavMobile: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const handleClick = () => {
+        if (isOpen) {
+            setIsOpen(false);
+        }
+        else {
+            setIsOpen(true);
+        }
+        console.log(isOpen);
+    }
 
     return (
         <nav className={` ${styles.navbar} flex items-center justify-between flex-wrap bg-navbar-gray p-4 fixed top-0 left-0 right-0 z-50 }`}>
             {/* Logo */}
-            <Image src="/assets/icon.png" alt="Logo" width={33} height={33} />
-
+            <a href="#hero">
+                <Image src="/assets/icon.png" alt="Logo" width={33} height={33} />
+            </a>
             {/* Hamburger Menu */}
-            <button onClick={() => setIsOpen(!isOpen)} >
+            <button onClick={handleClick} >
                 {isOpen ? (
                     <Image src="/assets/x.svg" alt="Close Icon" width={24} height={24} />
                 ) : (
@@ -52,40 +64,46 @@ const NavMobile: React.FC = () => {
             </button>
 
             {/* Menu Items */}
-            <div className={`w-full block flex-grow text-base  ${isOpen ? 'mt-4 opened' : 'hidden'}`}>
-                <a href="#about">
-                    <div className='flex justify-between items-center h-[44px] text-nav-text'>
-                        <p>เกี่ยวกับเรา</p>
-                        <Image
-                            src="/assets/arrowRight2.svg"
-                            alt="My SVG"
-                            width={24}
-                            height={24}
-                        />
-                    </div>
-                </a>
-                <a href="#menu">
-                    <div className='flex justify-between items-center h-[44px] text-nav-text my-2'>
-                        <p>เมนูอาหาร</p>
-                        <Image
-                            src="/assets/arrowRight2.svg"
-                            alt="My SVG"
-                            width={24}
-                            height={24}
-                        />
-                    </div>
-                </a>
-                <a href="#contact">
-                    <div className='flex justify-between items-center h-[44px] text-nav-text'>
-                        <p>ติดต่อ</p>
-                        <Image
-                            src="/assets/arrowRight2.svg"
-                            alt="My SVG"
-                            width={24}
-                            height={24}
-                        />
-                    </div>
-                </a>
+            <div className={`w-full flex flex-col text-base  ${isOpen ? 'mt-4 opened' : 'hidden'}`}>
+                <button onClick={handleClick}>
+                    <a href="#about">
+                        <div className='flex justify-between items-center h-[44px] text-nav-text'>
+                            <p>เกี่ยวกับเรา</p>
+                            <Image
+                                src="/assets/arrowRight2.svg"
+                                alt="My SVG"
+                                width={24}
+                                height={24}
+                            />
+                        </div>
+                    </a>
+                </button>
+                <button onClick={handleClick}>
+                    <a href="#menu">
+                        <div className='flex justify-between items-center h-[44px] text-nav-text my-2'>
+                            <p>เมนูอาหาร</p>
+                            <Image
+                                src="/assets/arrowRight2.svg"
+                                alt="My SVG"
+                                width={24}
+                                height={24}
+                            />
+                        </div>
+                    </a>
+                </button>
+                <button onClick={handleClick}>
+                    <a href="#contact">
+                        <div className='flex justify-between items-center h-[44px] text-nav-text'>
+                            <p>ติดต่อ</p>
+                            <Image
+                                src="/assets/arrowRight2.svg"
+                                alt="My SVG"
+                                width={24}
+                                height={24}
+                            />
+                        </div>
+                    </a>
+                </button>
             </div>
         </nav>
     );

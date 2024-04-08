@@ -5,7 +5,7 @@ import { FACEBOOK_URL } from '../constants';
 
 const HeroSection: React.FC = () => {
     return (
-        <section className='relative h-screen'>
+        <section id="hero" className='relative h-screen'>
             {/* Background Images */}
             <div className="hidden mobile:block absolute inset-0 -z-50">
                 <Image

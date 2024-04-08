@@ -36,7 +36,7 @@ const Separator:React.FC<SeparatorProps> = ({im1, im2}) => {
     return (
         <>
             <div className='mobile:flex mobile:w-screen'>
-                <Image src={`/assets/images/${im1}.png`} alt="food1" width={imageSize.item1.width} height={imageSize.item1.height} className={`${isMobile ? 'max-h-[250px] w-full' : 'w-full max-h-[500px]'}`} />
+                <Image src={`/assets/images/${im1}.png`} alt="food1" width={imageSize.item1.width} height={imageSize.item1.height} style={{objectFit: "cover"}} className={`${isMobile ? 'max-h-[250px] w-full' : 'w-full max-h-[500px]'}`} />
                 <Image src={`/assets/images/${im2}.png`} alt="food2" width={imageSize.item2.width} height={imageSize.item2.height} style={{objectFit: "cover"}} className={`${isMobile ? 'max-h-[250px] w-full' : 'w-full max-h-[500px]'}`} />
             </div>
         </>
